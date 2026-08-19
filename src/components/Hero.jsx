@@ -8,7 +8,7 @@ function Hero() {
     >
 
       {/* TEXT */}
-      <div className="text-center lg:text-left">
+      <div className="text-center">
 
         <h1 className="text-5xl font-extrabold leading-[0.95] tracking-[-3px] sm:text-6xl md:text-7xl lg:text-8xl">
           Warga Roblox
@@ -18,13 +18,13 @@ function Hero() {
           </span>
         </h1>
 
-        <p className="mx-auto mt-7 max-w-xl text-sm leading-7 text-slate-400 sm:text-base lg:mx-0">
+        <p className="mx-auto mt-7 max-w-xl text-sm leading-7 text-slate-400 sm:text-base">
           Tempat berkumpulnya para pemain Roblox
           dari tanah Sunda. Main bareng,
           bersosialisasi, dan bikin kenangan bareng.
         </p>
 
-        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
+        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
 
           <a
             href="#join"
@@ -59,7 +59,7 @@ function Hero() {
             />
           </div>
 
-          <div className="relative">
+          <div className="relative text-center">
             <h2 className="text-xl font-bold">
               Warga Roblox Sunda
             </h2>
