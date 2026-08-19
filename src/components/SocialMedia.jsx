@@ -1,37 +1,93 @@
+import { motion } from 'motion/react'
+
 function SocialMedia() {
   return (
-    <section
+    <motion.section
       id="social"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{
+        duration: 0.7,
+        ease: 'easeOut',
+      }}
       className="mx-auto w-full max-w-6xl px-6 py-24"
     >
 
-      <p className="text-xs font-extrabold tracking-[3px] text-blue-400">
+      {/* LABEL */}
+      <motion.p
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.1, duration: 0.5 }}
+        className="text-xs font-extrabold tracking-[3px] text-blue-400"
+      >
         SOSIAL MEDIA
-      </p>
+      </motion.p>
 
-      <h2 className="mt-5 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+      {/* TITLE */}
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        className="mt-5 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl"
+      >
         Ikuti <span className="text-blue-500">WRS.</span>
-      </h2>
+      </motion.h2>
 
-      <p className="mt-6 max-w-xl text-sm leading-7 text-slate-400">
+      {/* DESCRIPTION */}
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+        className="mt-6 max-w-xl text-sm leading-7 text-slate-400"
+      >
         Temukan informasi terbaru dan aktivitas
         Warga Roblox Sunda melalui sosial media kami.
-      </p>
+      </motion.p>
 
-      {/* TIKTOK */}
-      <div className="mt-10 max-w-2xl rounded-2xl border border-white/10 bg-[#0d1d30] p-5">
+      {/* TIKTOK CARD */}
+      <motion.div
+        initial={{ opacity: 0, y: 40, scale: 0.98 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{
+          delay: 0.4,
+          duration: 0.6,
+          ease: 'easeOut',
+        }}
+        whileHover={{
+          y: -5,
+        }}
+        className="mt-10 max-w-2xl rounded-2xl border border-white/10 bg-[#0d1d30] p-5 shadow-lg shadow-black/10"
+      >
 
+        {/* INFO */}
         <div className="flex items-center gap-5">
 
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-black">
+          <motion.div
+            whileHover={{
+              scale: 1.08,
+              rotate: 3,
+            }}
+            transition={{
+              type: 'spring',
+              stiffness: 400,
+              damping: 15,
+            }}
+            className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-black"
+          >
             <img
               src="/tiktok.png"
               alt="TikTok"
               className="h-8 w-8 object-contain"
             />
-          </div>
+          </motion.div>
 
           <div className="min-w-0 flex-1">
+
             <p className="text-[9px] font-extrabold tracking-[2px] text-blue-400">
               TIKTOK
             </p>
@@ -43,23 +99,36 @@ function SocialMedia() {
             <p className="mt-1 text-xs text-slate-500">
               Follow TikTok Warga Roblox Sunda
             </p>
+
           </div>
 
         </div>
 
         {/* BUTTON */}
-        <a
+        <motion.a
           href="https://www.tiktok.com/@wargarobloxsunda"
           target="_blank"
           rel="noreferrer"
-          className="mt-5 flex w-full items-center justify-center rounded-xl bg-blue-500 px-4 py-3 text-xs font-bold transition hover:-translate-y-0.5 hover:bg-blue-600"
+          whileHover={{
+            y: -3,
+            scale: 1.02,
+          }}
+          whileTap={{
+            scale: 0.95,
+          }}
+          transition={{
+            type: 'spring',
+            stiffness: 400,
+            damping: 17,
+          }}
+          className="mt-5 flex w-full items-center justify-center rounded-xl bg-blue-500 px-4 py-3 text-xs font-bold shadow-lg shadow-blue-500/20 hover:bg-blue-600"
         >
           Kunjungi TikTok →
-        </a>
+        </motion.a>
 
-      </div>
+      </motion.div>
 
-    </section>
+    </motion.section>
   )
 }
 
