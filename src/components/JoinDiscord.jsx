@@ -66,7 +66,7 @@ function JoinDiscord() {
         <motion.img
           src="/discord.png"
           alt="Discord"
-          className="h-6 w-6 object-contain"
+          className="h-6 w-6 object-contain rounded-2xl"
           whileHover={{
             rotate: 8,
             scale: 1.1,
