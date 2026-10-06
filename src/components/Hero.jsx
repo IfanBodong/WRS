@@ -14,7 +14,7 @@ function Hero() {
         transition={{ duration: 0.5 }}
         className="inline-flex items-center gap-2 rounded-xl border-3 border-black bg-[#FFDE59] px-4 py-2 text-xs sm:text-sm font-black uppercase shadow-[4px_4px_0px_0px_#000]"
       >
-        Komunitas Roblox #1 di Tanah Sunda
+        Komunitas Roblox di Tanah Sunda
       </motion.div>
 
       {/* TITLE */}
