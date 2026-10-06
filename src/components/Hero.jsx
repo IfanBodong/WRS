@@ -1,113 +1,91 @@
 import { motion } from 'motion/react'
-import logo from '../assets/logo.png'
 
 function Hero() {
   return (
     <section
       id="home"
-      className="mx-auto grid min-h-screen w-full max-w-6xl grid-cols-1 items-center gap-12 px-6 pb-20 pt-36 lg:grid-cols-2 lg:gap-20"
+      className="mx-auto flex min-h-[85vh] w-full max-w-5xl flex-col items-center justify-center px-6 pb-20 pt-16 sm:pt-24 text-center"
     >
 
-      {/* TEXT */}
+      {/* BADGE */}
       <motion.div
-        className="text-center"
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: 'easeOut' }}
+        transition={{ duration: 0.5 }}
+        className="inline-flex items-center gap-2 rounded-xl border-3 border-black bg-[#FFDE59] px-4 py-2 text-xs sm:text-sm font-black uppercase shadow-[4px_4px_0px_0px_#000]"
       >
-
-        <h1 className="text-5xl font-extrabold leading-[0.95] tracking-[-3px] sm:text-6xl md:text-7xl lg:text-8xl">
-          Warga Roblox
-          <br />
-          <span className="text-blue-500">
-            Sunda.
-          </span>
-        </h1>
-
-        <motion.p
-          className="mx-auto mt-7 max-w-xl text-sm leading-7 text-slate-400 sm:text-base"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-        >
-          Tempat berkumpulnya para pemain Roblox
-          dari tanah Sunda. Main bareng,
-          bersosialisasi, dan bikin kenangan bareng.
-        </motion.p>
-
-        <motion.div
-          className="mt-8 flex flex-col justify-center gap-3 sm:flex-row"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.35, duration: 0.6 }}
-        >
-
-          <motion.a
-            href="#join"
-            whileHover={{ y: -4, scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-            className="rounded-xl bg-blue-500 px-5 py-3 text-sm font-bold shadow-lg shadow-blue-500/20"
-          >
-            Gabung Komunitas
-          </motion.a>
-
-          <motion.a
-            href="#about"
-            whileHover={{ y: -4, scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-            className="rounded-xl border border-white/10 px-5 py-3 text-sm font-bold text-slate-300 hover:border-blue-500/40 hover:text-white"
-          >
-            Tentang Kami →
-          </motion.a>
-
-        </motion.div>
-
+        Komunitas Roblox #1 di Tanah Sunda
       </motion.div>
 
-      {/* LOGO */}
-      <motion.div
-        className="mx-auto w-full max-w-sm"
-        initial={{ opacity: 0, scale: 0.85 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.2, duration: 0.8, ease: 'easeOut' }}
+      {/* TITLE */}
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1, duration: 0.6 }}
+        className="mt-8 text-5xl font-black leading-[1.05] tracking-tight sm:text-7xl md:text-8xl"
       >
+        Warga Roblox
+        <br />
+        <span className="box-decoration-clone bg-[#FF5964] text-white px-4 py-1.5 border-4 border-black shadow-[6px_6px_0px_0px_#000] inline-block mt-3">
+          Sunda.
+        </span>
+      </motion.h1>
 
-        <motion.div
-          animate={{ y: [0, -8, 0] }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-          className="relative overflow-hidden rounded-3xl border border-blue-500/15 bg-[#0d1d30] p-8 shadow-2xl shadow-black/30"
+      {/* DESCRIPTION */}
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        className="mt-8 max-w-2xl text-base font-medium leading-7 text-black sm:text-lg lg:text-xl"
+      >
+        Tempat nongkrong & mabar paling seru buat warga Roblox Sunda. Ngariung bareng, seru-seruan, dan bangun komunitas solid ti unggal kota nepi ka pelosok lembur!
+      </motion.p>
+
+      {/* CTA BUTTONS */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+        className="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center"
+      >
+        <motion.a
+          href="#join"
+          whileHover={{ x: -3, y: -3, boxShadow: '7px 7px 0px 0px #000' }}
+          whileTap={{ x: 0, y: 0, boxShadow: '0px 0px 0px 0px #000' }}
+          className="rounded-2xl border-3 border-black bg-[#4ADE80] px-8 py-4 text-center text-base font-black shadow-[4px_4px_0px_0px_#000] text-black"
         >
+          Gabung Discord Sekarang
+        </motion.a>
 
-          <div className="absolute -right-20 -top-20 h-48 w-48 rounded-full bg-blue-500/20 blur-3xl" />
+        <motion.a
+          href="#features"
+          whileHover={{ x: -3, y: -3, boxShadow: '7px 7px 0px 0px #000' }}
+          whileTap={{ x: 0, y: 0, boxShadow: '0px 0px_0px_0px #000' }}
+          className="rounded-2xl border-3 border-black bg-white px-8 py-4 text-center text-base font-black shadow-[4px_4px_0px_0px_#000] text-black"
+        >
+          Jelajahi Aktivitas
+        </motion.a>
+      </motion.div>
 
-          <div className="relative flex h-64 items-center justify-center">
-
-            <img
-              src={logo}
-              alt="Logo Warga Roblox Sunda"
-              className="h-48 w-48 rounded-2xl object-contain shadow-2xl"
-            />
-
-          </div>
-
-          <div className="relative text-center">
-
-            <h2 className="text-xl font-bold">
-              Warga Roblox Sunda
-            </h2>
-
-            <p className="mt-2 text-sm text-slate-500">
-              Ngariung • Maén • Ngabagéakeun
-            </p>
-
-          </div>
-
-        </motion.div>
-
+      {/* STATS */}
+      <motion.div 
+        className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-3xl"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.5 }}
+      >
+        <div className="rounded-2xl border-3 border-black bg-[#38BDF8] p-5 text-center shadow-[5px_5px_0px_0px_#000]">
+          <div className="text-3xl font-black">100+</div>
+          <div className="text-sm font-bold mt-1">Warga WRS</div>
+        </div>
+        <div className="rounded-2xl border-3 border-black bg-[#FFDE59] p-5 text-center shadow-[5px_5px_0px_0px_#000]">
+          <div className="text-3xl font-black">Seru</div>
+          <div className="text-sm font-bold mt-1">Main Bareng</div>
+        </div>
+        <div className="rounded-2xl border-3 border-black bg-[#FF5964] text-white p-5 text-center shadow-[5px_5px_0px_0px_#000]">
+          <div className="text-3xl font-black">100%</div>
+          <div className="text-sm font-bold mt-1">Solid Pisan</div>
+        </div>
       </motion.div>
 
     </section>

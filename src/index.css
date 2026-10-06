@@ -1,10 +1,15 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #FFFDF4;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: #111111;
+  margin: 0;
 }
 
-body {
-  margin: 0;
-  background: #06111f;
+html {
+  scroll-behavior: smooth;
 }
